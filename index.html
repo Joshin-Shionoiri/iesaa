@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="国際教育支援評価協会（IESAA）｜学ぶすべての人に、可能性を。">
+<title>IESAA｜国際教育支援評価協会</title>
+<style>
+:root{--ink:#111827;--muted:#667085;--line:#e6e8ec;--bg:#f7f8fa;--white:#fff;--accent:#163a70;--accent2:#2b64a7;--soft:#eaf1f9;--max:1180px;--radius:22px;}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;color:var(--ink);background:var(--white);line-height:1.8}a{color:inherit;text-decoration:none}button{font:inherit}.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+.header{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(255,255,255,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(230,232,236,.8);transition:.3s}.header.scrolled{box-shadow:0 8px 30px rgba(16,24,40,.07)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:12px;align-items:center;font-weight:800;letter-spacing:.02em}.brand-mark{width:36px;height:36px;border:2px solid var(--accent);display:grid;place-items:center;border-radius:50%;position:relative}.brand-mark:before{content:"";width:12px;height:12px;border:2px solid var(--accent);transform:rotate(45deg)}.brand small{display:block;font-size:9px;color:var(--muted);letter-spacing:.16em;font-weight:700}.navlinks{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700}.navlinks a{position:relative}.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:var(--accent);transition:.25s}.navlinks a:hover:after{right:0}.nav-cta{padding:9px 16px;border:1px solid var(--accent);border-radius:999px;color:var(--accent)}.menu{display:none;background:none;border:0;font-size:25px}
+.hero{min-height:100svh;display:grid;place-items:center;padding:130px 0 90px;background:radial-gradient(circle at 82% 25%,#dce9f7 0,rgba(220,233,247,.35) 19%,transparent 42%),linear-gradient(135deg,#fff 0,#f7f9fc 100%);overflow:hidden;position:relative}.hero:before{content:"IESAA";position:absolute;right:-5vw;bottom:-8vw;font-size:28vw;font-weight:900;letter-spacing:-.08em;color:rgba(22,58,112,.035);line-height:1}.eyebrow{display:inline-flex;gap:9px;align-items:center;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 6px rgba(43,100,167,.12)}h1{font-size:clamp(45px,7vw,88px);line-height:1.05;letter-spacing:-.045em;margin:24px 0 25px;max-width:900px}h1 span{color:var(--accent)}.hero-copy{font-size:17px;color:#475467;max-width:690px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 21px;border-radius:999px;font-size:14px;font-weight:800;border:1px solid var(--line);transition:.25s;cursor:pointer}.btn.primary{background:var(--accent);color:white;border-color:var(--accent);box-shadow:0 10px 25px rgba(22,58,112,.2)}.btn:hover{transform:translateY(-2px)}.btn.secondary{background:white}.scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.2em;color:#98a2b3}.scroll:after{content:"";display:block;width:1px;height:38px;background:#cbd2da;margin:7px auto 0;animation:line 1.5s ease-in-out infinite}@keyframes line{0%,100%{transform:scaleY(.3);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+.section{padding:110px 0}.section.alt{background:var(--bg)}.kicker{font-size:11px;letter-spacing:.18em;color:var(--accent);font-weight:900}.section h2{font-size:clamp(30px,4vw,52px);line-height:1.18;letter-spacing:-.035em;margin:12px 0 20px}.lead{color:var(--muted);max-width:720px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}.manifesto{font-size:clamp(23px,3vw,38px);font-weight:800;line-height:1.5;letter-spacing:-.025em}.manifesto em{font-style:normal;color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:45px}.card{padding:27px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);min-height:210px;transition:.35s}.card:hover{transform:translateY(-7px);box-shadow:0 20px 50px rgba(16,24,40,.09)}.num{font-size:12px;color:#98a2b3;font-weight:900}.card h3{font-size:19px;margin:22px 0 8px}.card p{font-size:13px;color:var(--muted);margin:0}.icon{width:42px;height:42px;border-radius:12px;background:var(--soft);display:grid;place-items:center;color:var(--accent);font-weight:900;font-size:18px}
+.ilct{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}.ilct-box{background:var(--accent);color:white;border-radius:30px;padding:42px;position:relative;overflow:hidden}.ilct-box:after{content:"ILCT";position:absolute;right:-20px;bottom:-35px;font-size:120px;font-weight:900;color:rgba(255,255,255,.06)}.ilct-tag{font-size:11px;letter-spacing:.18em;opacity:.72}.ilct h3{font-size:clamp(32px,4vw,58px);margin:15px 0 8px;line-height:1}.ilct p{color:rgba(255,255,255,.78);position:relative;z-index:1}.ilct .btn{position:relative;z-index:1;margin-top:15px;background:white;color:var(--accent);border-color:white}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.fact{border:1px solid var(--line);border-radius:18px;padding:23px;background:#fff}.fact strong{font-size:28px;display:block}.fact span{font-size:12px;color:var(--muted)}
+.timeline{margin-top:45px;border-left:1px solid #d7dce3}.event{position:relative;padding:0 0 38px 35px}.event:before{content:"";position:absolute;left:-5px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px white}.event time{font-size:11px;font-weight:900;letter-spacing:.12em;color:var(--accent)}.event h3{margin:5px 0;font-size:18px}.event p{margin:0;color:var(--muted);font-size:13px}
+.profile{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}.profile-card{border:1px solid var(--line);border-radius:26px;padding:28px;background:linear-gradient(160deg,#fff,#f5f7fa)}.portrait{height:260px;border-radius:18px;background:linear-gradient(135deg,#dce6f2,#f6f8fb);display:grid;place-items:center;color:var(--accent);font-weight:900;font-size:70px;letter-spacing:-.08em}.profile-card h3{margin:20px 0 0;font-size:24px}.profile-card p{margin:4px 0;color:var(--muted);font-size:13px}.quote{font-size:25px;font-weight:800;line-height:1.6;margin:0 0 25px}.profile-copy{color:var(--muted)}
+.cta{padding:85px 0;background:var(--accent);color:white;text-align:center}.cta h2{font-size:clamp(32px,5vw,60px);margin:0 0 15px;letter-spacing:-.04em}.cta p{color:rgba(255,255,255,.76);margin:0 auto 28px;max-width:650px}.cta .btn{background:#fff;color:var(--accent);border-color:#fff}
+.footer{background:#0b1220;color:#d0d5dd;padding:60px 0 30px}.footergrid{display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:40px}.footer .brand{color:white}.footer small,.footer p,.footer a{color:#98a2b3;font-size:12px}.footer h4{color:white;margin:0 0 12px;font-size:12px}.legal{border-top:1px solid #1e293b;margin-top:35px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;font-size:11px;color:#667085}.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}.reveal.show{opacity:1;transform:none}.bar{height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));position:fixed;top:0;left:0;z-index:50;width:0}
+@media(max-width:850px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.nav-cta{display:none}.grid2,.ilct,.profile{grid-template-columns:1fr;gap:35px}.cards{grid-template-columns:1fr 1fr}.footergrid{grid-template-columns:1fr 1fr}.hero{padding-top:115px}}
+@media(max-width:520px){.container{width:min(calc(100% - 28px),var(--max))}.section{padding:78px 0}.cards,.facts,.footergrid{grid-template-columns:1fr}.hero-copy{font-size:15px}.ilct-box{padding:28px}.legal{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="bar" id="progress"></div>
+<header class="header" id="header"><div class="container nav">
+<a class="brand" href="#top" aria-label="IESAAトップ"><span class="brand-mark"></span><span>IESAA<small>International Education Support & Assessment Association</small></span></a>
+<nav class="navlinks" id="nav"><a href="#about">IESAAとは</a><a href="#business">事業</a><a href="#ilct">ILCT</a><a href="#profile">組織情報</a><a class="nav-cta" href="https://ja.iesaa.org/donate" target="_blank" rel="noopener">支援する</a></nav>
+<button class="menu" id="menu" aria-label="メニュー">☰</button>
+</div></header>
+<main id="top">
+<section class="hero"><div class="container">
+<div class="eyebrow reveal"><span class="dot"></span> Education × Assessment × Action</div>
+<h1 class="reveal">学ぶすべての人に、<br><span>可能性を。</span></h1>
+<p class="hero-copy reveal">国際教育支援評価協会（IESAA）は、教育支援と学習能力の評価・研究を通じて、学ぶ人が自ら未来を切り拓ける環境づくりを目指す教育団体です。</p>
+<div class="actions reveal"><a class="btn primary" href="#about">IESAAを知る →</a><a class="btn secondary" href="https://ja.iesaa.org/" target="_blank" rel="noopener">公式サイトを見る</a></div>
+</div><div class="scroll">SCROLL</div></section>
+
+<section class="section" id="about"><div class="container grid2">
+<div class="reveal"><div class="kicker">ABOUT IESAA</div><h2>教育を、<br>「支援」から「仕組み」へ。</h2><p class="lead">教育格差の解消、教育機会の拡充、学習能力の適正な評価、教育の質の向上、国際的な教育協力を活動の柱としています。</p></div>
+<p class="manifesto reveal">私たちは、単に学びの機会を届けるだけではなく、<em>学びの成果を客観的に捉え、検証し、次の支援につなげる。</em><br><br>その循環を、国内外へ広げていきます。</p>
+</div></section>
+
+<section class="section alt" id="business"><div class="container"><div class="kicker reveal">WHAT WE DO</div><h2 class="reveal">主な事業</h2><p class="lead reveal">定款に定める目的・事業をもとに、教育支援、評価、研究、情報発信、国際協力などを横断して取り組みます。</p>
+<div class="cards">
+<article class="card reveal"><div class="icon">01</div><h3>学習能力評価</h3><p>学習能力の評価・検定制度を企画・運営し、学びの力を可視化します。</p></article>
+<article class="card reveal"><div class="icon">02</div><h3>教育支援</h3><p>学習機会の提供、教育資源の提供、経済的困難を抱える方への教育支援を行います。</p></article>
+<article class="card reveal"><div class="icon">03</div><h3>教育研究</h3><p>学力・学習能力や教育格差などを調査研究し、情報として社会へ届けます。</p></article>
+<article class="card reveal"><div class="icon">04</div><h3>国際教育協力</h3><p>海外教育機関・国際機関等との連携を通じ、国際的な教育協力を進めます。</p></article>
+</div></div></section>
+
+<section class="section" id="ilct"><div class="container ilct"><div class="ilct-box reveal"><div class="ilct-tag">INTERNATIONAL LEARNING CAPABILITY TEST</div><h3>ILCT</h3><p>国際社会を理解し、自ら考える「学習力」を育てる検定。基礎学力からSDGs、国際課題などを多角的に扱い、G1〜G6の段階で成長を可視化します。</p><a class="btn" href="https://www.portal.ilct.org/kentei-detail.html" target="_blank" rel="noopener">検定の詳細を見る →</a></div>
+<div class="facts reveal"><div class="fact"><strong>G1–G6</strong><span>6段階のレベル設計</span></div><div class="fact"><strong>思考力</strong><span>知識だけでなく考える力を重視</span></div><div class="fact"><strong>国際</strong><span>SDGs・国際課題を題材に</span></div><div class="fact"><strong>評価</strong><span>学習能力を客観的に捉える</span></div></div></div></section>
+
+<section class="section alt"><div class="container"><div class="kicker reveal">ORIGIN & MILESTONES</div><h2 class="reveal">IESAAの歩み</h2><div class="timeline">
+<div class="event reveal"><time>2026.04.10</time><h3>国際教育支援評価協会を設立</h3><p>埼玉県川口市を主たる事務所とする任意団体として活動を開始。</p></div>
+<div class="event reveal"><time>2026.08.09</time><h3>定款を一部変更</h3><p>非営利性、公正性、透明性、検定事業の独立性などを含む組織規範を整備。</p></div>
+<div class="event reveal"><time>NOW</time><h3>教育支援・評価・研究を拡大</h3><p>ILCTを中心に、教育機関・企業・行政・非営利団体等との連携を進めています。</p></div>
+</div></div></section>
+
+<section class="section" id="profile"><div class="container profile"><div class="profile-card reveal"><div class="portrait">IESAA</div><h3>塩野入 晴心</h3><p>代表理事</p><p>International Education Support & Assessment Association</p></div><div class="reveal"><div class="kicker">MESSAGE</div><p class="quote">「学ぶすべての人に、可能性を。」<br>教育の成果を見つめ、次の可能性へつなげる。</p><p class="profile-copy">IESAAは、教育を社会の基盤と捉え、学習機会の拡充だけでなく、その学びがどのような成果につながっているのかを客観的に評価・研究することを大切にしています。国内外のパートナーと協力しながら、持続可能な教育支援の仕組みを築いていきます。</p><div class="facts" style="margin-top:28px"><div class="fact"><strong>2026</strong><span>設立年</span></div><div class="fact"><strong>川口市</strong><span>主たる事務所</span></div><div class="fact"><strong>5名</strong><span>団体案内掲載の職員数</span></div><div class="fact"><strong>任意団体</strong><span>法人格を有しない組織</span></div></div></div></div></section>
+
+<section class="cta"><div class="container reveal"><h2>教育の可能性を、<br>一緒に広げる。</h2><p>IESAAの活動を知る、学ぶ、協力する。あなたにできるかたちから参加できます。</p><a class="btn" href="https://ja.iesaa.org/donate" target="_blank" rel="noopener">活動を支援する →</a></div></section>
+</main>
+<footer class="footer"><div class="container"><div class="footergrid"><div><a class="brand" href="#top"><span class="brand-mark"></span><span>IESAA<small>International Education Support & Assessment Association</small></span></a><p>学ぶすべての人に、可能性を。</p></div><div><h4>NAVIGATION</h4><a href="#about">IESAAとは</a><br><a href="#business">事業</a><br><a href="#ilct">ILCT</a><br><a href="#profile">組織情報</a></div><div><h4>LINKS</h4><a href="https://www.iesaa.org/" target="_blank" rel="noopener">公式サイト</a><br><a href="https://www.portal.ilct.org/kentei-detail.html" target="_blank" rel="noopener">ILCT</a><br><a href="https://ja.iesaa.org/donate" target="_blank" rel="noopener">支援する</a></div></div><div class="legal"><span>© 2026 International Education Support & Assessment Association</span><span>任意団体｜主たる事務所：埼玉県川口市</span></div></div></footer>
+<script>
+const header=document.getElementById('header'), progress=document.getElementById('progress');
+window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',scrollY>10);const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(scrollY/h*100)+'%'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');menu.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+</script>
+</body>
+</html>

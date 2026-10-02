@@ -18,8 +18,22 @@
 @keyframes float{50%{transform:translate(18px,-22px) scale(1.04)}}@keyframes rotate{to{transform:rotate(405deg)}}@keyframes pulse{50%{box-shadow:0 0 0 13px rgba(79,135,197,0)}}
 /* hero */
 .hero{height:100svh;min-height:700px;position:relative;display:flex;align-items:center;overflow:hidden;background:radial-gradient(circle at 78% 35%,#d8ebff 0,rgba(216,235,255,.58) 16%,transparent 42%),linear-gradient(135deg,#fff 10%,#f7fbff 65%,#edf5fc 100%)}.hero-inner{position:relative;z-index:5;padding-top:55px}.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:850;letter-spacing:.18em;color:var(--blue);text-transform:uppercase}.pulse{width:7px;height:7px;border-radius:50%;background:var(--blue2);box-shadow:0 0 0 7px rgba(79,135,197,.12);animation:pulse 2s ease-in-out infinite}.hero h1{font-size:clamp(52px,8.5vw,116px);line-height:.97;letter-spacing:-.068em;margin:25px 0 25px;max-width:1100px;font-weight:850}.hero h1 span{color:var(--blue)}.hero p{font-size:clamp(15px,1.6vw,19px);max-width:680px;color:#475467;margin:0}.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:34px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:12px 19px;font-size:13px;font-weight:800;border:1px solid var(--line);transition:transform .35s,box-shadow .35s,background .35s}.btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(16,24,40,.11)}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 12px 30px rgba(22,77,141,.2)}.btn.light{background:rgba(255,255,255,.72);backdrop-filter:blur(10px)}.scrollhint{position:absolute;z-index:5;bottom:24px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.25em;color:#98a2b3;text-align:center}.scrollhint i{display:block;width:1px;height:45px;background:#c9d2dc;margin:7px auto 0;animation:stretch 1.7s ease-in-out infinite}@keyframes stretch{0%,100%{transform:scaleY(.2);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}.blob{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none;mix-blend-mode:multiply}.blob.one{width:360px;height:360px;right:5%;top:11%;background:radial-gradient(circle at 30% 30%,rgba(94,169,239,.55),rgba(126,191,247,.08) 65%,transparent 70%);animation:float 11s ease-in-out infinite}.blob.two{width:190px;height:190px;right:30%;bottom:8%;background:radial-gradient(circle,rgba(178,220,255,.8),transparent 70%);animation:float 9s ease-in-out infinite reverse}.orb{position:absolute;right:15%;top:29%;width:290px;height:290px;border:1px solid rgba(22,77,141,.15);border-radius:50%;animation:spin 22s linear infinite}.orb:before,.orb:after{content:"";position:absolute;border-radius:50%;background:#fff;box-shadow:0 0 25px rgba(79,135,197,.2)}.orb:before{width:11px;height:11px;top:20px;left:65px}.orb:after{width:7px;height:7px;bottom:28px;right:48px}@keyframes spin{to{transform:rotate(360deg)}}
-/* sticky-note system */
-.sticky-zone{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}.sticky{position:absolute;width:170px;min-height:125px;padding:22px 18px 18px;background:#fff8b8;color:#344054;box-shadow:0 18px 35px rgba(16,24,40,.12);font-size:12px;line-height:1.55;transform:rotate(-4deg) translateY(35px);opacity:0;transition:opacity .8s ease,transform 1s cubic-bezier(.2,.8,.2,1)}.sticky:before{content:"";position:absolute;width:44px;height:13px;left:50%;top:-6px;transform:translateX(-50%) rotate(-2deg);background:rgba(112,169,211,.28)}.sticky b{display:block;font-size:10px;letter-spacing:.16em;margin-bottom:8px;color:#164d8d}.sticky.show{opacity:1;transform:rotate(var(--r)) translateY(0)}.sticky.s1{right:6%;top:16%;--r:5deg}.sticky.s2{left:4%;top:46%;--r:-6deg;background:#eaf4ff}.sticky.s3{right:10%;bottom:14%;--r:4deg;background:#fcefd7}.sticky.s4{left:9%;bottom:10%;--r:-4deg;background:#eef7ec}.sticky.s5{right:28%;top:52%;--r:3deg;background:#f7e9ff}
+
+/* scroll-driven visual story */
+.scroll-story{position:relative;height:170vh;background:#071522;color:#fff;overflow:clip}
+.scroll-story .story-sticky{position:sticky;top:0;height:100svh;min-height:680px;display:grid;place-items:center;overflow:hidden}
+.story-copy{position:absolute;left:7vw;top:50%;transform:translateY(-50%);z-index:5;max-width:410px}
+.story-copy .eyebrow2{color:#8fc4f2}.story-copy h2{font-size:clamp(48px,7vw,100px);margin:12px 0;letter-spacing:-.065em;line-height:.95}.story-copy p{color:#b9c7d5;max-width:390px}
+.story-progress{position:absolute;left:7vw;bottom:45px;width:170px;height:2px;background:#ffffff24;z-index:5}.story-progress i{display:block;height:100%;width:0;background:#8fc4f2;transform-origin:left}
+.story-visual{position:absolute;width:min(54vw,700px);height:min(54vw,700px);right:5vw;top:50%;transform:translateY(-50%);display:grid;place-items:center}
+.story-core{width:35%;height:35%;border:1px solid #8fc4f255;transform:rotate(45deg);background:linear-gradient(135deg,#ffffff0a,#8fc4f20b);box-shadow:0 0 80px #8fc4f214;transition:none}
+.story-ring{position:absolute;border:1px solid #8fc4f233;border-radius:50%;inset:8%}.story-ring.r2{inset:22%}.story-ring.r3{inset:36%;border-style:dashed}
+.story-orbit{position:absolute;inset:0;border-radius:50%;border:1px solid #ffffff0e}.story-orbit:before,.story-orbit:after{content:"";position:absolute;border-radius:50%;background:#8fc4f2;box-shadow:0 0 28px #8fc4f288}.story-orbit:before{width:10px;height:10px;left:12%;top:25%}.story-orbit:after{width:6px;height:6px;right:15%;bottom:21%}
+.story-word{position:absolute;font-size:clamp(10px,1vw,14px);letter-spacing:.25em;font-weight:800;color:#ffffffa8;white-space:nowrap}.sw1{top:18%;left:14%}.sw2{right:8%;top:42%}.sw3{left:20%;bottom:15%}.sw4{right:25%;bottom:7%}
+.story-card{position:absolute;right:10vw;bottom:11%;z-index:4;padding:18px 22px;border:1px solid #ffffff1c;border-radius:18px;background:#ffffff09;backdrop-filter:blur(15px);font-size:11px;letter-spacing:.08em;color:#dce7f1}
+@media(max-width:800px){.scroll-story{height:145vh}.story-copy{left:22px;top:17%;transform:none}.story-copy h2{font-size:50px}.story-copy p{font-size:13px}.story-visual{width:90vw;height:90vw;right:-14vw;top:58%;opacity:.85}.story-card{right:22px;bottom:9%}}
+@media(prefers-reduced-motion:reduce){.scroll-story{height:auto;padding:100px 0}.story-sticky{position:relative;height:auto;min-height:600px}.story-core,.story-ring,.story-orbit,.story-word,.story-card{transform:none!important}.story-progress{display:none}}
+
 /* common */
 .section{padding:145px 0;position:relative}.soft{background:var(--bg)}.eyebrow2{font-size:10px;letter-spacing:.22em;font-weight:900;color:var(--blue)}.section h2{font-size:clamp(39px,6vw,78px);line-height:1.04;letter-spacing:-.055em;margin:13px 0 24px;font-weight:850}.lead{max-width:700px;color:var(--muted);font-size:15px}.fade{opacity:0;transform:translateY(35px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}.fade.in{opacity:1;transform:none}.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 /* recruitment intro */
@@ -38,61 +52,33 @@
 @media(max-width:560px){.wrap{width:min(calc(100% - 28px),var(--max))}.header,.nav{height:64px}.navlinks{top:64px}.hero{min-height:650px}.hero-inner{padding-top:30px}.hero h1{font-size:clamp(47px,14vw,72px)}.hero p{font-size:14px}.blob.one{width:240px;height:240px;right:-40px}.orb{width:220px;height:220px}.section,.intro{padding:105px 0}.intro-copy p{font-size:31px}.role{min-height:285px;padding:28px}.principles{grid-template-columns:1fr}.principle{min-height:160px}.process-item{grid-template-columns:52px 1fr;gap:16px;padding:28px 0}.process-item h3{font-size:22px}.cta{min-height:70vh}.footer-links{gap:14px}.legal{flex-direction:column;gap:6px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.fade{opacity:1;transform:none}}
 .role-link{cursor:default}.role-more{position:absolute;left:35px;bottom:28px;font-size:11px;font-weight:850;color:var(--blue);letter-spacing:.04em}.apply-form{background:#fff}.form-shell{margin-top:55px;max-width:850px;padding:42px;border:1px solid var(--line);border-radius:30px;background:#f7f9fc;box-shadow:0 25px 70px rgba(16,24,40,.06)}.form-shell form{display:grid;gap:22px}.form-shell label{font-size:12px;font-weight:800;display:grid;gap:8px}.form-shell label span{color:#164d8d;font-size:10px}.form-shell input,.form-shell select,.form-shell textarea{width:100%;border:1px solid rgba(16,24,40,.14);border-radius:14px;background:#fff;padding:13px 15px;font:inherit;font-size:14px;color:var(--ink);outline:none;transition:.25s}.form-shell input:focus,.form-shell select:focus,.form-shell textarea:focus{border-color:#5d9fd5;box-shadow:0 0 0 4px rgba(93,159,213,.12)}.form-shell textarea{resize:vertical;min-height:100px}.form-note{font-size:10px;color:#98a2b3;margin:0}.form-success:empty,.form-error:empty{display:none}.form-success{padding:15px;border-radius:14px;background:#edf8ef;color:#276738;font-size:13px;margin-bottom:15px}.form-error{padding:15px;border-radius:14px;background:#fff0f0;color:#a33a3a;font-size:13px;margin-bottom:15px}.honeypot{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;opacity:0!important}.role-more:hover{text-decoration:underline}@media(max-width:800px){.sticky{width:135px;min-height:105px;font-size:10px;padding:17px 14px}.s1{right:-10px!important}.s2{left:-20px!important}.s3{right:-5px!important}.s4{left:-10px!important}.s5{display:none}.form-shell{padding:25px}}
-
-/* V6 — scroll-driven visual storytelling */
-.scroll-canvas{position:relative;height:270vh;background:#050a10;color:#fff;overflow:clip}
-.scroll-sticky{position:sticky;top:0;height:100svh;min-height:680px;overflow:hidden;display:grid;place-items:center}
-.scroll-bg{position:absolute;inset:0;background:radial-gradient(circle at 70% 42%,rgba(90,157,224,.20),transparent 30%),radial-gradient(circle at 20% 80%,rgba(40,90,145,.16),transparent 28%),#050a10}
-.scroll-grid{position:absolute;inset:-20%;opacity:.22;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:70px 70px;transform:perspective(600px) rotateX(58deg) translateY(20%);transform-origin:center bottom}
-.scroll-copy{position:absolute;z-index:7;left:max(28px,calc((100% - 1180px)/2));top:50%;transform:translateY(-50%);width:min(470px,42vw);pointer-events:none}
-.scroll-copy .mini{font-size:10px;letter-spacing:.22em;font-weight:850;color:#8fc4f2;margin-bottom:20px}
-.scroll-copy h2{font-size:clamp(42px,6vw,82px);line-height:.98;letter-spacing:-.065em;margin:0 0 22px;font-weight:850;color:#fff}
-.scroll-copy p{font-size:14px;line-height:1.9;color:rgba(255,255,255,.58);max-width:410px}
-.scroll-copy .counter{margin-top:32px;font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.35)}
-.visual-stage{position:absolute;z-index:4;left:50%;top:50%;width:min(650px,58vw);height:min(650px,58vw);transform:translate(-18%,-50%);perspective:1000px}
-.visual-core{position:absolute;left:50%;top:50%;width:280px;height:280px;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(180,220,255,.4);box-shadow:0 0 90px rgba(91,162,227,.13),inset 0 0 50px rgba(91,162,227,.08);display:grid;place-items:center;transition:transform .08s linear,opacity .08s linear}
-.visual-core:before{content:"";position:absolute;inset:32px;border:1px solid rgba(180,220,255,.2);border-radius:50%}
-.visual-core:after{content:"";position:absolute;width:13px;height:13px;border-radius:50%;background:#dff2ff;box-shadow:0 0 30px #8fc4f2;top:28px;left:52px}
-.core-word{font-size:50px;letter-spacing:-.07em;font-weight:900;color:#fff}
-.orbit{position:absolute;left:50%;top:50%;border:1px solid rgba(180,220,255,.16);border-radius:50%;transform:translate(-50%,-50%);transition:transform .08s linear}
-.orbit.o1{width:410px;height:220px}.orbit.o2{width:520px;height:310px;transform:translate(-50%,-50%) rotate(58deg)}.orbit.o3{width:610px;height:420px;transform:translate(-50%,-50%) rotate(-36deg)}
-.orbit i{position:absolute;width:8px;height:8px;background:#9bcdf4;border-radius:50%;box-shadow:0 0 20px rgba(155,205,244,.8)}
-.orbit.o1 i{right:8%;top:14%}.orbit.o2 i{left:7%;top:44%}.orbit.o3 i{right:15%;bottom:12%}
-.visual-label{position:absolute;padding:9px 12px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.045);backdrop-filter:blur(14px);border-radius:999px;font-size:9px;letter-spacing:.16em;color:rgba(255,255,255,.72);transition:transform .08s linear,opacity .08s linear}
-.vl1{left:7%;top:22%}.vl2{right:3%;top:57%}.vl3{left:19%;bottom:10%}
-.scroll-steps{position:absolute;right:max(28px,calc((100% - 1180px)/2));top:50%;transform:translateY(-50%);z-index:8;display:grid;gap:10px}
-.scroll-step{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);transition:.35s}.scroll-step.active{background:#9ed1f5;box-shadow:0 0 18px rgba(158,209,245,.75);transform:scale(1.45)}
-.scroll-progress-label{position:absolute;right:max(28px,calc((100% - 1180px)/2));bottom:34px;z-index:8;font-size:9px;letter-spacing:.18em;color:rgba(255,255,255,.32)}
-.scroll-caption{position:absolute;z-index:8;left:max(28px,calc((100% - 1180px)/2));bottom:34px;font-size:9px;letter-spacing:.16em;color:rgba(255,255,255,.28)}
-.role-page .hero-art{transition:transform .1s linear,opacity .1s linear}
-/* remove old note treatment */
-.sticky-zone{display:none!important}.sticky{display:none!important}
-@media(max-width:800px){
- .scroll-canvas{height:245vh}.scroll-copy{left:22px;top:18%;transform:none;width:calc(100% - 44px)}.scroll-copy h2{font-size:clamp(40px,13vw,64px)}.scroll-copy p{font-size:12px;max-width:340px}.visual-stage{left:50%;top:62%;width:94vw;height:94vw;transform:translate(-50%,-50%)}.visual-core{width:190px;height:190px}.core-word{font-size:34px}.orbit.o1{width:270px;height:145px}.orbit.o2{width:350px;height:210px}.orbit.o3{width:420px;height:280px}.scroll-steps{right:20px;top:55%;}.scroll-caption{left:22px}.scroll-progress-label{right:20px}
-}
-@media(prefers-reduced-motion:reduce){.scroll-canvas *{transition:none!important}}
 </style>
-</head>
+<style>.application-system{overflow:hidden;border:1px solid #d9d9de!important;border-radius:22px!important;background:#fff!important;box-shadow:0 20px 60px #00000012!important}.system-head{height:76px;background:#f7f7f9;border-bottom:1px solid #e5e5e8;display:flex;align-items:center;gap:14px;padding:0 22px}.system-dot{width:10px;height:10px;border-radius:50%;background:#16a34a;box-shadow:0 0 0 5px #16a34a18}.system-head strong{display:block;font-size:14px}.system-head small{display:block;color:#888;font-size:9px;letter-spacing:.14em;margin-top:4px}.system-status{margin-left:auto;font-size:9px;letter-spacing:.14em;color:#16803a;border:1px solid #a8dfb8;border-radius:99px;padding:6px 9px}.system-body{padding:26px}.system-note{display:grid;gap:5px;padding:16px 18px;background:#f7f8fa;border-left:3px solid #111;margin-bottom:24px;font-size:13px}.system-note span{color:#777;font-size:12px}.application-system label{display:block;margin:0 0 22px!important;font-size:13px!important;font-weight:700}.application-system label span{font-size:10px!important;background:#111!important;color:#fff!important;padding:4px 7px!important;border-radius:4px!important;margin-left:6px}.application-system input,.application-system select,.application-system textarea{box-sizing:border-box;width:100%;margin-top:9px!important;border:1px solid #d9d9df!important;background:#fff!important;border-radius:10px!important;padding:13px 14px!important;font:inherit!important;outline:none;transition:.2s}.application-system input:focus,.application-system select:focus,.application-system textarea:focus{border-color:#111!important;box-shadow:0 0 0 3px #1111110b}.submit-area{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:28px;padding-top:22px;border-top:1px solid #e5e5e8}.submit-area small{display:block;color:#999;font-size:10px}.submit-area strong{font-size:12px}.submit-area .applybtn{margin:0!important}.form-note{font-size:11px!important;color:#999!important;line-height:1.7!important}.form-success:empty,.form-error:empty{display:none}.form-error{padding:12px;background:#fff0f0;color:#b42318;border-radius:9px;margin-bottom:15px}.honeypot{display:none!important}@media(max-width:640px){.system-body{padding:20px}.system-head{padding:0 16px}.submit-area{align-items:stretch;flex-direction:column}.submit-area .applybtn{width:100%}}
+</style></head>
 <body>
 <div id="loader" aria-label="IESAA recruitment site loading"><span class="loader-shape a"></span><span class="loader-shape b"></span><span class="loader-shape c"></span><span class="loader-shape d"></span><div class="loader-inner"><div class="loader-mark"></div><div class="loader-name">IESAA RECRUIT</div><div class="loader-sub">INTERNATIONAL EDUCATION SUPPORT & ASSESSMENT ASSOCIATION</div><div class="loader-status" id="loaderStatus">PREPARING YOUR EXPERIENCE</div><div class="loader-bar"><i></i></div><div class="loader-percent" id="loaderPercent">0%</div></div></div>
 <div class="progress" id="progress"></div>
 <header class="header" id="header"><div class="wrap nav"><a class="brand" href="#top"><span class="brand-mark"></span><span>IESAA<small>RECRUIT / JOIN US</small></span></a><nav class="navlinks" id="nav"><a href="#about">IESAAとは</a><a href="#roles">募集分野</a><a href="#philosophy">考え方</a><a href="#process">参加まで</a><a class="nav-cta" href="#apply">応募・参加</a></nav><button class="menu" id="menu" aria-label="メニュー">☰</button></div></header>
+
+<div class="recruit-modal" id="recruitModal" aria-hidden="true">
+ <div class="recruit-modal-backdrop" data-close-recruit></div>
+ <div class="recruit-dialog" role="dialog" aria-modal="true" aria-labelledby="recruitTitle">
+  <button class="recruit-close" type="button" aria-label="閉じる" data-close-recruit>×</button>
+  <div class="recruit-alert">現在、集中的に募集しています</div>
+  <h2 id="recruitTitle">現在集中的に下記の職種で<br>募集を行っております。</h2>
+  <p>IESAAの活動を支える中核ポジションを中心に、活動メンバーを募集しています。</p>
+  <div class="recruit-dialog-list"><a href="cfo.html">財務責任者（CFO）<span>最優先募集 ↗</span></a><a href="role-exam.html">試験運営・試験監督 <span>募集 ↗</span></a><a href="role-pr.html">広報・SNS <span>募集 ↗</span></a><a href="#roles" data-close-recruit>その他の職種を見る ↓</a></div>
+ </div>
+</div>
+<style>
+.recruit-modal{position:fixed;inset:0;z-index:10001;display:grid;place-items:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility .45s ease}.recruit-modal.open{opacity:1;visibility:visible}.recruit-modal-backdrop{position:absolute;inset:0;background:rgba(3,10,17,.68);backdrop-filter:blur(12px)}.recruit-dialog{position:relative;width:min(680px,100%);background:#fff;border-radius:28px;padding:42px 42px 36px;box-shadow:0 35px 100px rgba(0,0,0,.3);transform:translateY(20px) scale(.97);transition:transform .55s cubic-bezier(.2,.8,.2,1);overflow:hidden}.recruit-modal.open .recruit-dialog{transform:none}.recruit-dialog:before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:#d62828}.recruit-alert{display:inline-flex;background:#d62828;color:#fff;padding:7px 12px;border-radius:999px;font-size:10px;font-weight:900;letter-spacing:.08em}.recruit-dialog h2{font-size:clamp(28px,4vw,46px);line-height:1.16;letter-spacing:-.045em;margin:20px 0 14px}.recruit-dialog p{color:#667085;font-size:14px;margin:0 0 24px}.recruit-dialog-list{display:grid;gap:9px}.recruit-dialog-list a{display:flex;justify-content:space-between;align-items:center;padding:15px 17px;border:1px solid #e5e7eb;border-radius:14px;font-size:13px;font-weight:800;transition:.25s}.recruit-dialog-list a:hover{transform:translateX(4px);border-color:#d62828}.recruit-dialog-list span{font-size:9px;color:#d62828}.recruit-close{position:absolute;right:16px;top:12px;width:36px;height:36px;border:0;background:#f2f4f7;border-radius:50%;font-size:24px;line-height:1;color:#344054;cursor:pointer}.modal-open{overflow:hidden}@media(max-width:600px){.recruit-dialog{padding:38px 22px 24px;border-radius:22px}.recruit-dialog h2{font-size:29px}}
+</style>
 <div class="page-enter"><main id="top">
 <section class="hero"><div class="blob one"></div><div class="blob two"></div><div class="orb"></div><span class="geo ring" style="right:7%;top:18%;width:430px;height:430px;opacity:.7;animation:float 12s ease-in-out infinite"></span><span class="geo square" style="right:28%;top:20%;width:95px;height:95px;opacity:.55;animation:rotate 14s linear infinite"></span><span class="geo dots" style="right:5%;bottom:17%;opacity:.65;animation:float 9s ease-in-out infinite"></span><span class="geo cross" style="right:39%;bottom:18%;color:var(--blue);animation:pulse 3s ease-in-out infinite"></span><div class="wrap hero-inner"><div class="eyebrow fade"><span class="pulse"></span> IESAA RECRUIT / JOIN US</div><h1 class="fade d1">学ぶすべての人に、<br><span>可能性を。</span></h1><p class="fade d2">その可能性を支える側へ。教育・評価・国際協力の現場で、あなたの得意を活動につなげる。</p><div class="hero-actions fade d3"><a class="btn primary" href="#roles">募集分野を見る ↓</a><a class="btn light" href="#apply">応募・参加について</a></div></div><div class="scrollhint">SCROLL<i></i></div></section>
 
 <section class="intro" id="about"><span class="geo ring intro-ring"></span><span class="geo cross intro-cross"></span><div class="wrap intro-copy"><div class="eyebrow2 fade">WHY IESAA</div><p class="fade d1">教育を、<em>「支援」だけで終わらせない。</em><br>学びを届け、見つめ、評価し、<em>次の可能性へ。</em></p><div class="note fade d2">国際教育支援評価協会（IESAA）｜学ぶすべての人に、可能性を。</div></div></section>
 
-
-<section class="scroll-canvas" data-scroll-story="index">
- <div class="scroll-sticky"><div class="scroll-bg"></div><div class="scroll-grid"></div>
-  <div class="scroll-copy"><div class="mini">IESAA RECRUIT / ROLES</div><h2>あなたの得意が、<br>景色を変える。</h2><p>スクロールすると、募集分野が次々に切り替わります。財務、試験運営、広報、Web・IT、企画、教育支援・国際協力。役割ごとに、支える方法は違います。</p><div class="counter" id="roleCounter">01 / 06</div></div>
-  <div class="visual-stage"><div class="orbit o1"><i></i></div><div class="orbit o2"><i></i></div><div class="orbit o3"><i></i></div><div class="visual-core"><span class="core-word" id="roleWord">CFO</span></div><div class="visual-label vl1" id="roleLabel1">FINANCE</div><div class="visual-label vl2" id="roleLabel2">BUDGET</div><div class="visual-label vl3" id="roleLabel3">STRATEGY</div></div>
-  <div class="scroll-steps" id="roleDots"><i class="scroll-step active"></i><i class="scroll-step"></i><i class="scroll-step"></i><i class="scroll-step"></i><i class="scroll-step"></i><i class="scroll-step"></i></div>
-  <div class="scroll-caption" id="roleCaption">FINANCE · 財務責任者</div><div class="scroll-progress-label">SCROLL TO EXPLORE</div>
- </div>
-</section>
 <section class="section roles" id="roles"><span class="geo dots" style="right:4%;top:12%;opacity:.42"></span><div class="wrap"><div class="roles-head"><div><div class="eyebrow2 fade">WHAT YOU CAN DO</div><h2 class="fade d1">あなたの「得意」が、<br>活動になる。</h2></div><p class="fade d2">IESAAの活動を支える分野を、役割ごとに紹介します。募集内容・対象は各募集ページの案内を基準に確認してください。</p></div><div class="role-grid">
-<article class="role role-link"><div class="role-no">KEY</div><h3>財務責任者 / CFO</h3><p>IESAAの財務基盤、予算、資金計画、財務体制を支える重要ポジション。</p><a class="role-more" href="cfo.html">募集詳細を見る →</a><span class="role-shape"></span></article>
 <article class="role fade" onclick="location.href='cfo.html'" style="cursor:pointer"><div class="num">00 / FINANCE</div><h3>財務責任者<br>（CFO）</h3><p>IESAAの財務・会計・資金計画を担い、活動を継続できる財務基盤をつくる。現在、最重要ポジションとして募集しています。</p><div class="role-art"></div><div class="role-arrow">↗</div></article>
 <article class="role fade"><div class="num">01 / EXAM</div><h3>試験運営・<br>試験監督</h3><p>国際学習能力検定 ILCT など、検定運営を支える。受検者への案内や会場運営など、公正で落ち着いた現場をつくる役割。</p><div class="role-art"></div><div class="role-arrow">↗</div></article>
 <article class="role fade d1"><div class="num">02 / PR</div><h3>広報・<br>SNS</h3><p>IESAAの活動や教育に関する情報を、必要な人へ届ける。Web記事、SNS、広報素材などをつくる役割。</p><div class="role-art"></div><div class="role-arrow">↗</div></article>
@@ -100,6 +86,24 @@
 <article class="role fade d3"><div class="num">04 / PLAN</div><h3>企画・<br>運営</h3><p>教育活動、イベント、検定などをよりよくするための企画や運営を担う。アイデアを実際の活動へつなげる役割。</p><div class="role-art"></div><div class="role-arrow">↗</div></article>
 <article class="role fade"><div class="num">05 / SUPPORT</div><h3>教育支援・<br>国際協力</h3><p>教育支援や国際的な教育協力に関する活動を支える。学ぶ人の視点から、できることを考える役割。</p><div class="role-art"></div><div class="role-arrow">↗</div></article>
 </div></div></section>
+
+
+<section class="scroll-story" id="scroll-story">
+  <div class="story-sticky">
+    <div class="story-copy">
+      <div class="eyebrow2">SCROLL TO EXPLORE</div>
+      <h2>あなたの力が、<br>動き出す。</h2>
+      <p>スクロールすると、IESAAを支える6つの役割がひとつの活動へつながっていきます。</p>
+    </div>
+    <div class="story-visual" id="storyVisual" aria-hidden="true">
+      <div class="story-ring"></div><div class="story-ring r2"></div><div class="story-ring r3"></div><div class="story-orbit"></div>
+      <div class="story-core"></div>
+      <span class="story-word sw1">FINANCE</span><span class="story-word sw2">EXAM</span><span class="story-word sw3">PR / SNS</span><span class="story-word sw4">WEB / IT</span>
+    </div>
+    <div class="story-card" id="storyLabel">FINANCE → EXAM → PR → WEB → PLAN → SUPPORT</div>
+    <div class="story-progress"><i id="storyProgress"></i></div>
+  </div>
+</section>
 
 <section class="section philosophy" id="philosophy"><span class="geo dark-ring"></span><span class="geo dark-square"></span><div class="wrap philosophy-grid"><div><div class="eyebrow2 fade">OUR APPROACH</div><h2 class="fade d1">資格だけでは、<br>決めない。</h2><p class="fade d2">IESAAが大切にするのは、学ぶ人や活動に向き合う姿勢。役割に応じて必要な知識・責任感・公平性などを確認しながら、活動につながる入口をつくります。</p></div><div class="principles"><article class="principle fade"><b>01 / RESPONSIBILITY</b><h3>責任を持つ</h3><p>任された役割を丁寧に最後まで扱う。</p></article><article class="principle fade d1"><b>02 / FAIRNESS</b><h3>公正である</h3><p>相手や立場に左右されず、客観的に考える。</p></article><article class="principle fade d2"><b>03 / DIVERSITY</b><h3>多様性を尊重する</h3><p>異なる背景や考え方を受け止める。</p></article><article class="principle fade d3"><b>04 / ACTION</b><h3>まず動く</h3><p>考えたことを、小さな行動から形にする。</p></article></div></div></section>
 
@@ -180,6 +184,28 @@ document.querySelectorAll('a[target="_blank"]').forEach(a=>a.addEventListener('c
 </script>
 
 <script>
+
+const recruitModal=document.getElementById('recruitModal');
+function openRecruit(){recruitModal.classList.add('open');recruitModal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');}
+function closeRecruit(){recruitModal.classList.remove('open');recruitModal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');sessionStorage.setItem('iesaaRecruitModalSeen','1');}
+document.querySelectorAll('[data-close-recruit]').forEach(x=>x.addEventListener('click',closeRecruit));
+addEventListener('keydown',e=>{if(e.key==='Escape')closeRecruit()});
+setTimeout(()=>{if(!sessionStorage.getItem('iesaaRecruitModalSeen'))openRecruit()},10200);
+
+const story=document.getElementById('scroll-story'), visual=document.getElementById('storyVisual'), storyProgress=document.getElementById('storyProgress'), storyLabel=document.getElementById('storyLabel');
+const storyWords=[...document.querySelectorAll('.story-word')];
+function clamp(n,a,b){return Math.max(a,Math.min(b,n))}
+function updateStory(){
+ if(!story||reduced)return;
+ const rect=story.getBoundingClientRect(), range=Math.max(1,story.offsetHeight-innerHeight), p=clamp(-rect.top/range,0,1);
+ const x=(p-.5)*170, y=Math.sin(p*Math.PI)*-34, scale=.76+p*.62, rot=p*210;
+ visual.style.transform=`translateY(-50%) translate3d(${x}px,${y}px,0) scale(${scale}) rotate(${rot}deg)`;
+ storyProgress.style.width=(p*100)+'%';
+ storyLabel.style.transform=`translate3d(0,${(1-p)*20}px,0)`; storyLabel.style.opacity=.35+p*.65;
+ storyWords.forEach((w,i)=>{const a=i*.75; w.style.transform=`translate3d(${Math.sin((p*5+a))*45}px,${Math.cos((p*4+a))*35}px,0) rotate(${(p*120)*(i%2?-1:1)}deg)`;w.style.opacity=clamp(.25+p*(.75),.25,1)});
+}
+addEventListener('scroll',updateStory,{passive:true});addEventListener('resize',updateStory);updateStory();
+
 window.formspree=window.formspree||function(){(formspree.q=formspree.q||[]).push(arguments)};
 formspree('initForm',{formElement:'#iesaa-application-form',formId:'mojgpzky',data:{source:'IESAA RECRUIT',page:location.pathname}});
 const stickyObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.sticky').forEach((x,i)=>setTimeout(()=>x.classList.add('show'),i*150));stickyObserver.unobserve(e.target)}}),{threshold:.15});
